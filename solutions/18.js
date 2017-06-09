@@ -1,3 +1,19 @@
+// Rahul Kalra
+// Return the missing number in an input array of consecutively increasing number
+
+const solution = (array) =>{
+  let newArray = [];
+  for(let i = 0; i < array.length; i++){
+    if(!((array[i + 1]) - (array[i])) === 1){
+      newArray.push((array[i]) + 1);
+    }
+  }
+  return newArray;
+};
+
+module.exports = {solution};
+
+
 // Find missing number in array
 // Return the missing number in an input array of consecutively
 // increasing numbers.
@@ -14,8 +30,10 @@
  * input array or
  * null if none is found
  */
-const solution1 = (arr) => {
-    let missingNum = null;
+
+/*const solution1 = arr => {
+    let missingNum = null,
+>>>>>>> another solution for problem #18
         i = 0;
 
     while (!missingNum && i < arr.length - 1) {
@@ -37,17 +55,21 @@ const solution1 = (arr) => {
  * the input array or
  * null if none is found
  */
-const solution2 = (arr) => {
-    let i = 1;
 
-    while (i < arr.length && arr[i - 1] + 1 === arr[i]) {
-        i++;
-    }
+// const solution2 = arr => {
+//  let i = 1;
+//
+//  while (i < arr.length && arr[i - 1] + 1 === arr[i]) {
+//      i++;
+//  }
+//
+//  return i === arr.length ? null : arr[i - 1] + 1;
+//}
 
-    return i === arr.length ? null : arr[i - 1] + 1;
-};
 
-module.exports = {
-    solution1,
-    solution2,
-};
+
+//module.exports = {
+//  solution1,
+//  solution2
+//};
+

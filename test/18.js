@@ -1,7 +1,6 @@
 const expect = require('chai').expect;
 let solution1 = require('../solutions/18').solution1;
     solution2 = require('../solutions/18').solution2;
-// solution = require('../yourSolution').solution;
 
 describe('Find missing number in array', () => {
   it('should return 7 for [5,6,8,9]', () => {
@@ -9,7 +8,8 @@ describe('Find missing number in array', () => {
           result2 = solution2([5, 6, 8, 9]);
     expect(result1).to.equal(7);
     expect(result2).to.equal(7);
-  });
+
+});
 
   it('should return 94 for [89,90,91,92,93,95]', () => {
     const result1 = solution1([89, 90, 91, 92, 93, 95]);
@@ -32,3 +32,4 @@ describe('Find missing number in array', () => {
     expect(result2).to.equal(-8);
   });
 });
+
